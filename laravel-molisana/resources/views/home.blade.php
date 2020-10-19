@@ -122,24 +122,9 @@ $data = '[
  }
  ]';
 
-$data = json_decode($data, true);
+$data = json_decode($data);
 
-$lunga = [];
-$corta = [];
-$cortissima = [];
-
-foreach ($data as $prodotto) {
-	if	($prodotto['tipo'] === 'lunga') {
-		$lunga[] = $prodotto;
-	} elseif	($prodotto['tipo'] === 'corta') {
-		$corta[] = $prodotto;
-	} elseif	($prodotto['tipo'] === 'cortissima') {
-		$cortissima[] = $prodotto;
-	}
-
-}
 @endphp
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 	<head>
@@ -154,44 +139,45 @@ foreach ($data as $prodotto) {
 		</header>
 		<main>
 			<section class="tipoDiPasta">
-				@if($lunga)
 					<h2>Lunga</h2>
 					<ul>
-						@foreach ($lunga as $prodotto)
+						@foreach($data as $prodotto)
+							@if ($prodotto->tipo == 'lunga')
 							<li>
-								<img src="{{$prodotto['src']}}" alt="immagine">
-								<h3>{{$prodotto['titolo']}}</h3>
+								<img src="{{$prodotto->src}}" alt="immagine">
+								<h3>{{$prodotto->titolo}}</h3>
 							</li>
+							@endif
 						@endforeach
 					</ul>
-				@endif
 			</section>
 			<section class="tipoDiPasta">
-				@if($corta)
 					<h2>Corta</h2>
 					<ul>
-						@foreach ($corta as $prodotto)
+						@foreach($data as $prodotto)
+							@if ($prodotto->tipo == 'corta')
 							<li>
-								<img src="{{$prodotto['src']}}" alt="immagine">
-								<h3>{{$prodotto['titolo']}}</h3>
+								<img src="{{$prodotto->src}}" alt="immagine">
+								<h3>{{$prodotto->titolo}}</h3>
 							</li>
+							@endif
 						@endforeach
 					</ul>
-				@endif
 			</section>
 			<section class="tipoDiPasta">
-				@if($cortissima)
 					<h2>Cortissima</h2>
 					<ul>
-						@foreach ($cortissima as $prodotto)
+						@foreach($data as $prodotto)
+							@if ($prodotto->tipo == 'cortissima')
 							<li>
-								<img src="{{$prodotto['src']}}" alt="immagine">
-								<h3>{{$prodotto['titolo']}}</h3>
+								<img src="{{$prodotto->src}}" alt="immagine">
+								<h3>{{$prodotto->titolo}}</h3>
 							</li>
+							@endif
 						@endforeach
 					</ul>
-				@endif
 			</section>
+
 		</main>
 	</body>
 </html>
