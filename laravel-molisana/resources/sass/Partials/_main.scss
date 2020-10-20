@@ -1,8 +1,16 @@
-.typeOfPasta__list {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow: wrap;
-	list-style: none;
-	padding: 0 20px;
+.main {
+    margin-top: 20px;
+    background: url(../images/fondo-pag-speciali.jpg) repeat center center fixed;
+    background-size: cover;
+}
+.typeOfPasta {
+    &__title {
+        text-transform: uppercase;
+        font-size: 2.5em;
+        color: #002d73;
+        font-weight: 700;
+    }
+    &__list {
+        @include my-display-flex(column, center, center);
+    }
 }

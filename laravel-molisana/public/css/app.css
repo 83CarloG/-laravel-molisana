@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,700&display=swap);* {
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap);* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
 
 html {
   font-size: 16px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
@@ -22,21 +22,45 @@ html {
 
 .logo {
   text-align: center;
+  padding: 50px;
 }
 
 .nav__list {
-  list-style: none;
-}
-
-.nav__title {
-  display: inline;
-}
-
-.typeOfPasta__list {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-flow: wrap;
   list-style: none;
-  padding: 0 20px;
+}
+.nav__item {
+  margin-right: 10px;
+}
+.nav__title {
+  padding: 20px 10px;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.nav__title--active {
+  background-color: #b3e5fc;
+}
+
+.main {
+  margin-top: 20px;
+  background: url(../images/fondo-pag-speciali.jpg) repeat center center fixed;
+  background-size: cover;
+}
+
+.typeOfPasta__title {
+  text-transform: uppercase;
+  font-size: 2.5em;
+  color: #002d73;
+  font-weight: 700;
+}
+.typeOfPasta__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
