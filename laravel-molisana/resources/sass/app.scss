@@ -1,4 +1,7 @@
-//
-h1 {
-	color: blue;
-}
+@import 'Partials/_variables.scss';
+@import 'Partials/_mixins.scss';
+@import 'Partials/_common.scss';
+// Header
+@import 'Partials/_header.scss';
+// Main
+@import 'Partials/_main.scss';

@@ -1,4 +1,42 @@
-h1 {
-  color: blue;
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,700&display=swap);* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+html {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  height: 100%;
+  max-width: 1200px;
+  min-width: 95px;
+}
+
+.header {
+  width: 100%;
+}
+
+.logo {
+  text-align: center;
+}
+
+.nav__list {
+  list-style: none;
+}
+
+.nav__title {
+  display: inline;
+}
+
+.typeOfPasta__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  list-style: none;
+  padding: 0 20px;
+}

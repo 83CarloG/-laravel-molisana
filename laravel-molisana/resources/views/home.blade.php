@@ -125,6 +125,7 @@ $data = '[
 $data = json_decode($data);
 
 @endphp
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 	<head>
@@ -134,49 +135,68 @@ $data = json_decode($data);
 		<link rel="stylesheet" href="{{'css/app.css'}}">
 	</head>
 	<body>
-		<header>
-			<img src="{{asset('images/marchio.png')}}" alt="">
+		<header class="header">
+			<div class="logo">
+				<img class="logo__img" src="{{asset('images/marchio.png')}}" alt="logo img">
+			</div>
+			<div class="nav">
+				<ul class="nav_list">
+					<li class="nav__item">
+						<h3 class="nav__title">Home</h3>
+					</li>
+					<li class="nav__item">
+						<a href="#">
+							<h3 class="nav__title">Prodotti</h3>
+						</a>
+					</li>
+					<li class="nav__item">
+						<h3 class="nav__title">News</h3>
+					</li>
+				</ul>
+			</div>
 		</header>
 		<main>
-			<section class="tipoDiPasta">
-					<h2>Lunga</h2>
-					<ul>
-						@foreach($data as $prodotto)
-							@if ($prodotto->tipo == 'lunga')
-							<li>
-								<img src="{{$prodotto->src}}" alt="immagine">
-								<h3>{{$prodotto->titolo}}</h3>
-							</li>
-							@endif
-						@endforeach
-					</ul>
-			</section>
-			<section class="tipoDiPasta">
-					<h2>Corta</h2>
-					<ul>
-						@foreach($data as $prodotto)
-							@if ($prodotto->tipo == 'corta')
-							<li>
-								<img src="{{$prodotto->src}}" alt="immagine">
-								<h3>{{$prodotto->titolo}}</h3>
-							</li>
-							@endif
-						@endforeach
-					</ul>
-			</section>
-			<section class="tipoDiPasta">
-					<h2>Cortissima</h2>
-					<ul>
-						@foreach($data as $prodotto)
-							@if ($prodotto->tipo == 'cortissima')
-							<li>
-								<img src="{{$prodotto->src}}" alt="immagine">
-								<h3>{{$prodotto->titolo}}</h3>
-							</li>
-							@endif
-						@endforeach
-					</ul>
-			</section>
+			<div class="container">
+				<section class="typeOfPasta">
+						<h2 class="typeOfPasta__title">Lunga</h2>
+						<ul class="typeOfPasta__list">
+							@forelse($data as $prodotto)
+								<li>
+									<img src="{{$prodotto->src}}" alt="immagine">
+									<h3>{{$prodotto->titolo}}</h3>
+								</li>
+								@empty
+								<li>Non ci sono formati</li>
+							@endforelse
+						</ul>
+				</section>
+				<section class="typeOfPasta">
+						<h2>Corta</h2>
+						<ul class="typeOfPasta__list">
+							@forelse($data as $prodotto)
+								<li>
+									<img src="{{$prodotto->src}}" alt="immagine">
+									<h3>{{$prodotto->titolo}}</h3>
+								</li>
+								@empty
+								<li>Non ci sono formati</li>
+							@endforelse
+						</ul>
+				</section>
+				<section class="typeOfPasta">
+						<h2>Cortissima</h2>
+						<ul class="typeOfPasta__list">
+							@forelse($data as $prodotto)
+								<li>
+									<img src="{{$prodotto->src}}" alt="immagine">
+									<h3>{{$prodotto->titolo}}</h3>
+								</li>
+								@empty
+								<li>Non ci sono formati</li>
+							@endforelse
+						</ul>
+				</section>
+			</div>
 
 		</main>
 	</body>
