@@ -62,12 +62,14 @@
 .typeOfPasta__item:hover {
     background-color: blue;
 }
+// tablet
 @media screen and (max-width: 992px) {
 	.typeOfPasta__list {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 10px;
     }
 }
+// smartphone
 @media screen and (max-width: 768px) {
 	.typeOfPasta__list {
         grid-template-columns: 1fr;

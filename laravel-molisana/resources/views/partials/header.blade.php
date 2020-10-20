@@ -1,6 +1,6 @@
 <!-- Header -->
 <header class="header">
-	<div class="logo">
+	<div class="logo logo--header">
 		<img class="logo__img" src="{{asset('images/marchio.png')}}" alt="logo img">
 	</div>
 	<div class="nav">

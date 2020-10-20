@@ -15,3 +15,14 @@ html {
 	height: 100%;
 	max-width: 1200px;
 }
+.logo {
+    text-align: center;
+    &--header {
+        @extend .logo;
+        padding: 50px
+    }
+    &--footer {
+        @extend .logo;
+        padding: 10px;
+    }
+}
