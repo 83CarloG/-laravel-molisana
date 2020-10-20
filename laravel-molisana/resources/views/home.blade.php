@@ -20,7 +20,8 @@ $data = config('pasta');
 						<li class="typeOfPasta__item">
 							<img class="typeOfPasta__img" src="{{$prodotto->src}}" alt="immagine">
 							<a class="typeOfPasta__link" href="prodotti/show/{{$key}}">
-								<h3 class="typeOfPasta__text">{{$prodotto->titolo}}</h3>
+                                <h3 class="typeOfPasta__text">{{$prodotto->titolo}}</h3>
+                                <img class="typeOfPasta__icon" src="{{asset('images/icon.svg')}}" alt="icon" >
 							</a>
 						</li>
 					@endif
@@ -37,7 +38,8 @@ $data = config('pasta');
 						<li class="typeOfPasta__item">
 							<img class="typeOfPasta__img" src="{{$prodotto->src}}" alt="immagine">
 							<a class="typeOfPasta__link" href="prodotti/show/{{$key}}">
-								<h3 class="typeOfPasta__text">{{$prodotto->titolo}}</h3>
+                                <h3 class="typeOfPasta__text">{{$prodotto->titolo}}</h3>
+                                <img class="typeOfPasta__icon" src="{{asset('images/icon.svg')}}" alt="icon" >
 							</a>
 						</li>
 					@endif
@@ -54,7 +56,8 @@ $data = config('pasta');
 						<li class="typeOfPasta__item">
 							<img class="typeOfPasta__img" src="{{$prodotto->src}}" alt="immagine">
 							<a class="typeOfPasta__link" href="prodotti/show/{{$key}}">
-								<h3 class="typeOfPasta__text">{{$prodotto->titolo}}</h3>
+                                <h3 class="typeOfPasta__text">{{$prodotto->titolo}}</h3>
+                                <img class="typeOfPasta__icon" src="{{asset('images/icon.svg')}}" alt="icon" >
 							</a>
 						</li>
 					@endif
