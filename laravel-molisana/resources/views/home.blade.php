@@ -125,7 +125,6 @@ $data = '[
 $data = json_decode($data);
 
 @endphp
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 	<head>
@@ -161,12 +160,14 @@ $data = json_decode($data);
 						<h2 class="typeOfPasta__title">Lunga</h2>
 						<ul class="typeOfPasta__list">
 							@forelse($data as $prodotto)
+							@if ($prodotto->tipo == 'lunga')
 								<li>
 									<img src="{{$prodotto->src}}" alt="immagine">
 									<h3>{{$prodotto->titolo}}</h3>
 								</li>
-								@empty
-								<li>Non ci sono formati</li>
+							@endif
+							@empty
+							<li>Formato non presente</li>
 							@endforelse
 						</ul>
 				</section>
@@ -174,12 +175,14 @@ $data = json_decode($data);
 						<h2>Corta</h2>
 						<ul class="typeOfPasta__list">
 							@forelse($data as $prodotto)
+							@if ($prodotto->tipo == 'corta')
 								<li>
 									<img src="{{$prodotto->src}}" alt="immagine">
 									<h3>{{$prodotto->titolo}}</h3>
 								</li>
-								@empty
-								<li>Non ci sono formati</li>
+							@endif
+							@empty
+							<li>Formato non presente</li>
 							@endforelse
 						</ul>
 				</section>
@@ -187,12 +190,14 @@ $data = json_decode($data);
 						<h2>Cortissima</h2>
 						<ul class="typeOfPasta__list">
 							@forelse($data as $prodotto)
+							@if ($prodotto->tipo == 'cortissima')
 								<li>
 									<img src="{{$prodotto->src}}" alt="immagine">
 									<h3>{{$prodotto->titolo}}</h3>
 								</li>
-								@empty
-								<li>Non ci sono formati</li>
+							@endif
+							@empty
+							<li>Formato non presente</li>
 							@endforelse
 						</ul>
 				</section>
