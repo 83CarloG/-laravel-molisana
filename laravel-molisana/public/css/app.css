@@ -12,8 +12,7 @@ html {
 .container {
   margin: 0 auto;
   height: 100%;
-  max-width: 1200px;
-  min-width: 95px;
+  width: 1200px;
 }
 
 .header {
@@ -48,8 +47,12 @@ html {
 
 .main {
   margin-top: 20px;
-  background: url(../images/fondo-pag-speciali.jpg) repeat center center fixed;
+  background: url(../images/fondo-pag-speciali.jpg) repeat center center;
   background-size: cover;
+}
+
+.main > .container {
+  padding: 30px;
 }
 
 .typeOfPasta__title {
@@ -57,10 +60,17 @@ html {
   font-size: 2.5em;
   color: #002d73;
   font-weight: 700;
+  padding: 10px 0;
 }
 .typeOfPasta__list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+.typeOfPasta__img {
+  width: 100%;
+}
+.typeOfPasta__text {
+  display: none;
 }

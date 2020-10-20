@@ -17,10 +17,10 @@ $data = config('pasta');
 			<ul class="typeOfPasta__list">
 				@forelse($data as $key => $prodotto)
 					@if ($prodotto->tipo == 'lunga')
-						<li>
-							<img src="{{$prodotto->src}}" alt="immagine">
-							<a href="prodotti/show/{{$key}}">
-								<h3>{{$prodotto->titolo}}</h3>
+						<li class="typeOfPasta__item">
+							<img class="typeOfPasta__img" src="{{$prodotto->src}}" alt="immagine">
+							<a class="typeOfPasta__link" href="prodotti/show/{{$key}}">
+								<h3 class="typeOfPasta__text">{{$prodotto->titolo}}</h3>
 							</a>
 						</li>
 					@endif
@@ -30,14 +30,14 @@ $data = config('pasta');
 			</ul>
 		</section>
 		<section class="typeOfPasta">
-			<h2>Le corte</h2>
+			<h2 class="typeOfPasta__title">Le corte</h2>
 			<ul class="typeOfPasta__list">
 				@forelse($data as $key => $prodotto)
 					@if ($prodotto->tipo == 'corta')
-						<li>
-							<img src="{{$prodotto->src}}" alt="immagine">
-							<a href="prodotti/show/{{$key}}">
-								<h3>{{$prodotto->titolo}}</h3>
+						<li class="typeOfPasta__item">
+							<img class="typeOfPasta__img" src="{{$prodotto->src}}" alt="immagine">
+							<a class="typeOfPasta__link" href="prodotti/show/{{$key}}">
+								<h3 class="typeOfPasta__text">{{$prodotto->titolo}}</h3>
 							</a>
 						</li>
 					@endif
@@ -47,14 +47,14 @@ $data = config('pasta');
 			</ul>
 		</section>
 		<section class="typeOfPasta">
-			<h2>Le cortissime</h2>
+			<h2 class="typeOfPasta__title">Le cortissime</h2>
 			<ul class="typeOfPasta__list">
 				@forelse($data as $key => $prodotto)
 					@if ($prodotto->tipo == 'cortissima')
-						<li>
-							<img src="{{$prodotto->src}}" alt="immagine">
-							<a href="prodotti/show/{{$key}}">
-								<h3>{{$prodotto->titolo}}</h3>
+						<li class="typeOfPasta__item">
+							<img class="typeOfPasta__img" src="{{$prodotto->src}}" alt="immagine">
+							<a class="typeOfPasta__link" href="prodotti/show/{{$key}}">
+								<h3 class="typeOfPasta__text">{{$prodotto->titolo}}</h3>
 							</a>
 						</li>
 					@endif
