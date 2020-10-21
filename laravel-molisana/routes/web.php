@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,15 +15,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return redirect('prodotti');;
 })->name('home');
 
-
 Route::get('/prodotti', function () {
-    return view('prodotti');
+        // gli passo pasta.php dalla cartella config
+        $data = config('pasta');
+        $data = json_decode($data);
+        return view('prodotti', ['data' => $data]);
 		// aggiungo un alias
 })->name('prodotti');
 
+Route::get('/prodotti/show/{id}', function ($id) {
+    $data = config("pasta");
+    $data = json_decode($data, true);
+
+    return view('prodotto-singolo', ['data' => $data[$id]]);
+});
 
 Route::get('/news', function () {
     return view('news');

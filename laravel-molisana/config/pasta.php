@@ -122,6 +122,5 @@ $data = '[
  }
  ]';
 
-$data = json_decode($data);
 
 return $data;
