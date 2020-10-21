@@ -1,13 +1,33 @@
+.footer > .container {
+    padding: 50px 30px 10px;
+}
 .footer {
     //Footer top
     &__top {
-        padding: 50px 40px 10px;
+        padding: 50px px 10px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        justify-items: center;
-      }
-    &__col {
+        justify-items: flex-start;
+        // smartphone
+        @media screen and (max-width: 768px) {
+	    & {
+        grid-template-columns:  270px;
+        justify-content: center;
+            }
 
+        }
+    }
+    &__list {
+        list-style: none;
+        color: $primaryFooterColor;
+        line-height: 35px;
+        &--info {
+            line-height: normal;
+        }
+    }
+    &__item {
+        font-size: 1.25em;
+        font-weight: 400;
     }
     &__title {
         text-transform: uppercase;
@@ -15,14 +35,10 @@
         color: $primaryFooterColorTitle;
         font-size: 2em;
         font-weight: 700;
-
     }
     &__link {
         text-decoration: none;
         color: $primaryFooterColor;
-        font-size: 1.25em;
-        font-weight: 400;
-        line-height: 35px;
     }
     //Footer bottom
     &__bottom {

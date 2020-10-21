@@ -22,7 +22,7 @@ html {
         padding: 50px
     }
     &--footer {
-        @extend .logo;
-        padding: 10px;
+        text-align: left;
+        padding-bottom: 20px;
     }
 }
