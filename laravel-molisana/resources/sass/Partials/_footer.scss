@@ -7,7 +7,7 @@
         padding: 50px px 10px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        justify-items: flex-start;
+        justify-items: left;
         // smartphone
         @media screen and (max-width: 768px) {
 	    & {
