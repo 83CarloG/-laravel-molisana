@@ -15,7 +15,7 @@
 					@if ($prodotto->tipo == 'lunga')
 						<li class="typeOfPasta__item">
 							<img class="typeOfPasta__img" src="{{$prodotto->src}}" alt="immagine">
-							<a class="typeOfPasta__link" href="/prodotti/show/{{$key}}">
+							<a class="typeOfPasta__link" href="{{route('prodotti-singoli', $key)}}">
                                 <h3 class="typeOfPasta__text">{{$prodotto->titolo}}</h3>
                                 <img class="typeOfPasta__icon" src="{{asset('images/icon.svg')}}" alt="icon" >
 							</a>
@@ -33,7 +33,7 @@
 					@if ($prodotto->tipo == 'corta')
 						<li class="typeOfPasta__item">
 							<img class="typeOfPasta__img" src="{{$prodotto->src}}" alt="immagine">
-							<a class="typeOfPasta__link" href="/prodotti/show/{{$key}}">
+							<a class="typeOfPasta__link" href="{{route('prodotti-singoli', $key)}}">
                                 <h3 class="typeOfPasta__text">{{$prodotto->titolo}}</h3>
                                 <img class="typeOfPasta__icon" src="{{asset('images/icon.svg')}}" alt="icon" >
 							</a>
@@ -51,7 +51,7 @@
 					@if ($prodotto->tipo == 'cortissima')
 						<li class="typeOfPasta__item">
 							<img class="typeOfPasta__img" src="{{$prodotto->src}}" alt="immagine">
-							<a class="typeOfPasta__link" href="/prodotti/show/{{$key}}">
+							<a class="typeOfPasta__link" href="{{route('prodotti-singoli', $key)}}">
                                 <h3 class="typeOfPasta__text">{{$prodotto->titolo}}</h3>
                                 <img class="typeOfPasta__icon" src="{{asset('images/icon.svg')}}" alt="icon" >
 							</a>

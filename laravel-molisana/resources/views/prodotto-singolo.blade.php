@@ -5,25 +5,27 @@
 @section('mainContent')
 <div class="main-prodotti">
     <div class="container">
-        <h1 class="main-prodotti__title">{{$data['titolo']}}</h1>
+        <h1 class="main-prodotti__title">{{$data->titolo}}</h1>
         <div class="main-prodotti__figure">
-            <img class="main-prodotti__image" src="{{$data['src-h']}}" alt="#">
+            <img class="main-prodotti__image" src="{{$data->srch}}" alt="#">
         </div>
         <div class="main-prodotti__figure">
-            <img class="main-prodotti__image" src="{{$data['src-p']}}" alt="#">
+            <img class="main-prodotti__image" src="{{$data->srcp}}" alt="#">
         </div>
-
-
-
         <p class="main-prodotti__text">
-            {!!$data['descrizione']!!}
+            {!!$data->descrizione!!}
         </p>
-    <div>
-       <a href="/prodotti/show/"><i class="main-prodotti__icon fas fa-angle-left"></i></a>
-    </div>
-    <div>
-        <a href="/prodotti/show/"><i class="main-prodotti__icon fas fa-angle-right"></i></a>
-    </div>
+
+    @if ($id > 0)
+        <div class="main-prodotti__link main-prodotti__link--sx">
+            <a href="{{route('prodotti-singoli', $id - 1)}}"><i class="main-prodotti__icon fas fa-angle-left"></i></a>
+        </div>
+    @endif
+    @if ($id < $length - 1)
+        <div class="main-prodotti__link main-prodotti__link--dx">
+            <a href="{{route('prodotti-singoli', $id + 1)}}"><i class="main-prodotti__icon fas fa-angle-right"></i></a>
+        </div>
+    @endif
     </div>
 </div>
 
