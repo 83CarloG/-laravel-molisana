@@ -1,4 +1,4 @@
-.main-prodotti {
+.main-prodotto {
     position: relative;
     margin-top: 20px;
     padding: 40px 10px 10px;;
@@ -51,13 +51,13 @@
 
 // tablet
 @media screen and (max-width: 992px) {
-	.main-prodotti__text {
+	.main-prodotto__text {
         font-size: 1.5em;
     }
 }
 // smartphone
 @media screen and (max-width: 768px) {
-	.main-prodotti__text {
+	.main-prodotto__text {
         font-size: 1.1em;
     }
 }

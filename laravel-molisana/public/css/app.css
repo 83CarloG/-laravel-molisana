@@ -4735,21 +4735,21 @@ html {
     grid-gap: 10px;
   }
 }
-.main-prodotti {
+.main-prodotto {
   position: relative;
   margin-top: 20px;
   padding: 40px 10px 10px;
   background-color: #b7dae5;
   width: 100%;
 }
-.main-prodotti > .container {
+.main-prodotto > .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0 30px;
 }
-.main-prodotti__title {
+.main-prodotto__title {
   text-align: center;
   text-transform: uppercase;
   font-size: 2.5em;
@@ -4757,19 +4757,19 @@ html {
   font-weight: 700;
   padding: 10px 0;
 }
-.main-prodotti__figure {
+.main-prodotto__figure {
   min-width: 400px;
   height: 100%;
 }
-.main-prodotti__image {
+.main-prodotto__image {
   width: 100%;
 }
-.main-prodotti__text {
+.main-prodotto__text {
   font-size: 2em;
   line-height: 70px;
   color: #002d73;
 }
-.main-prodotti__link {
+.main-prodotto__link {
   width: 50px;
   height: 100px;
   background-color: #dbecf2;
@@ -4778,32 +4778,32 @@ html {
   justify-content: center;
   align-items: center;
 }
-.main-prodotti__link--sx {
+.main-prodotto__link--sx {
   position: absolute;
   top: 50%;
   right: none;
   bottom: none;
   left: 0;
 }
-.main-prodotti__link--dx {
+.main-prodotto__link--dx {
   position: absolute;
   top: 50%;
   right: 0;
   bottom: none;
   left: none;
 }
-.main-prodotti .fa-angle-left, .main-prodotti .fa-angle-right {
+.main-prodotto .fa-angle-left, .main-prodotto .fa-angle-right {
   font-size: 3em;
   color: #fff;
 }
 
 @media screen and (max-width: 992px) {
-  .main-prodotti__text {
+  .main-prodotto__text {
     font-size: 1.5em;
   }
 }
 @media screen and (max-width: 768px) {
-  .main-prodotti__text {
+  .main-prodotto__text {
     font-size: 1.1em;
   }
 }

@@ -31,7 +31,7 @@ Route::get('/prodotti/show/{id}', function ($id) {
     $data = config("pasta");
     $data = json_decode($data);
 
-    if (($data[$id]) == null) {
+    if (empty($data[$id])) {
         abort(404);
     }
 
@@ -39,7 +39,7 @@ Route::get('/prodotti/show/{id}', function ($id) {
 
     return view('prodotto-singolo', ['data' => $data[$id], 'id' => $id, 'length' => $length]);
 
-})->where('id', '[0-9]+')->name('prodotti-singoli');
+})->where('id', '[0-9]+')->name('prodotto-singolo');
 
 Route::get('/news', function () {
     return view('news');
